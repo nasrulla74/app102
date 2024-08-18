@@ -11,6 +11,7 @@ import { PiCheckCircleDuotone } from "react-icons/pi";
 import { getProduct } from '@/libs/apis';
 import LoadingSpinner from '../../loading';
 import RoomType from '@/components/RoomTypes/RoomTypes';
+import RoomType2 from '@/components/RoomTypes/RoomTypes2';
 import Faqs from '@/components/Faqs/Faqs';
 import ThemeContext from '@/context/themeContext';
 import CustomPortableText from '@/components/PortableText/PortableText';
@@ -50,7 +51,7 @@ const ProductDetails = (props) => {
               src={urlFor(product.image && product.image[index]).url()}
               className="product-detail-image"
               alt="product_image"
-              width={1024} height={685}
+              width={1024} height={572}
             />
           
           </div>
@@ -145,7 +146,7 @@ const ProductDetails = (props) => {
               <p className="text-center">Available Room Types</p>
             </div>
             <div className="flex-wrap justify-center gap-3 sm:flex px-6 pb-8">
-              <RoomType product={product} />
+              <RoomType2 product={product} />
               
             </div>
       </div>
@@ -282,13 +283,15 @@ const ProductDetails = (props) => {
       </div>
 
 
-      <div className="shadow-xl ring-1 ring-gray-900 my-20 bg-slate-100 mx-1 pb-12">
+      <div className="shadow-xl ring-1 ring-gray-900 my-20  bg-slate-100 mx-1 pb-12">
             <div className="mx-1 p-8 justify-center text-lg sm:text-2xl">
               <p className="text-center">Frequently Asked Questions</p>
             </div>
+            <div className="flex flex-col justify-center lg:w-9/12 lg:mx-auto pb-10">
             <div className=" ring-gray-200 ring-1 p-10 sm:m-10">
               <Faqs faqs={faqs}/>
              
+            </div>
             </div>
       </div>
       
